@@ -7,6 +7,7 @@
 * The model.py file was created from the jupyer notebook model.ipynb and the outputs were deleted. It is also viewable as model.ipynb and model.html
 * The drive.py file was added, it is the default file from the CarND github repo
 * The NN was tried on the second track falling of the track immediately. The NN was also retrained with 2 Laps clockwise and 2 Laps counterclockwise(as recorded on the first track) with no possitive effect.The data recorded for the submission can be found in the ./recdata directory, the recorded data of track2 has been excluded.
+* *UPDATE* ./recdata was removed due to restriction of number of files
 
 ## Data collection
 
