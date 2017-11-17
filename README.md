@@ -89,6 +89,7 @@ Multiple architectures were applied and the model architectures for each network
 An overview of the network performances is given in the following table:
 
 |Network|Performance\*|Point of failure\*\*|comment|
+|--:|---|---|---|---|
 Net001.h5|0|immideatly|poor performance high steering angles|
 Net002.h5|0|immideatly|seems smoother than Net001.h5|
 Net003.h5|0|immideatly|like Net002.h5|
