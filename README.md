@@ -93,6 +93,14 @@ An advantage of this network architecture is the small number of only 117 623 tr
 
 The model was trained using Adaptive Moment Estimation (Adam) optimizer minimizing the mean square error (mse) during training. A batch size of 128 was used. An epoch count of 5 was used to train the model.
 
+## Conclusion
+
+After running the model for a few laps the stability of the network can be confirmed. The driving performance is not too rough in comparison to other network architectures tested.
+
+##### Possible improvements
+
+The network architecture is not very deep and only has few parameters. Application of a deeper network containing i.e. more inception modules could improve the vehicle's performance. In addition more data could be captured to train the network or different augmentation methods could be applied. After taking a close look at the data many images with zero steering angle were observed. Considering this fact a further promising way to improve performance would be to generate more data on the 'critical' parts of the track meaning sharp corners or other parts only appearing for short time periods to level out the zero-steeringangle-data.
+
 ## Trial
 
 Multiple architectures were applied and the model architectures for each network can be found in Networksummaries.html. The stored network .h5 can be found in ./saved directory.
