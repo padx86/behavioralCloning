@@ -88,25 +88,25 @@ The model was trained using Adaptive Moment Estimation (Adam) optimizer minimizi
 Multiple architectures were applied and the model architectures for each network can be found in Networksummaries.html. The stored network .h5 can be found in ./saved directory.
 An overview of the network performances is given in the following table:
 
-|Network|Performance\*|Point of failure\*\*|comment|
-|--:|---|---|---|---|
-Net001.h5|0|immideatly|poor performance high steering angles|
-Net002.h5|0|immideatly|seems smoother than Net001.h5|
-Net003.h5|0|immideatly|like Net002.h5|
-Net004.h5|3|at bridge|Drives high steering angles in sharp corners|
-Net005.h5|5|first dirt curb directly after bridge|Very smooth steering(low angels)on straight tracks|
-Net006.h5|2|first corner|does not steer over 1 %|
-Net007.h5|6|after bridge to the left|smooth steering, but large enough angles to get round sharp curves|
-Net008.h5|7|after bridge to the right|extremly smooth steering|
-Net009.h5|6|after bridge to the right|oversteers(looks like sine), same topology as Net007.h5|
-Net010.h5|5|first sharp corner to the right|
-Net011.h5|7|-|performance not ideal, but made whole track|
-Net012.h5|8|-|performance not ideal, but made whole track|
-Net013.h5|5|first sharp corner to the right	oversteering|
-Net014.h5|3|hit Bridge	oversteering on yellow line, not middle of road|
-Net015.h5|9|-|good performance. Didn't leave lane once|
-Net016.h5|6|first sharp corner to the right|smooth steering|
-Net017.h5|8|-|Drives over yellow marking|
+| Network | Performance\* | Point of failure\*\* | comment |
+|:---|:-:|:---|:---|
+|Net001.h5|0|immideatly|poor performance high steering angles|
+|Net002.h5|0|immideatly|seems smoother than Net001.h5|
+|Net003.h5|0|immideatly|like Net002.h5|
+|Net004.h5|3|at bridge|Drives high steering angles in sharp corners|
+|Net005.h5|5|first dirt curb directly after bridge|Very smooth steering(low angels)on straight tracks|
+|Net006.h5|2|first corner|does not steer over 1 %|
+|Net007.h5|6|after bridge to the left|smooth steering, but large enough angles to get round sharp curves|
+|Net008.h5|7|after bridge to the right|extremly smooth steering|
+|Net009.h5|6|after bridge to the right|oversteers(looks like sine), same topology as Net007.h5|
+|Net010.h5|5|first sharp corner to the right|
+|Net011.h5|7|-|performance not ideal, but made whole track|
+|Net012.h5|8|-|performance not ideal, but made whole track|
+|Net013.h5|5|first sharp corner to the right|oversteering|
+|Net014.h5|3|hit Bridge|oversteering on yellow line, not middle of road|
+|Net015.h5|9|-|good performance. Didn't leave lane once|
+|Net016.h5|6|first sharp corner to the right|smooth steering|
+|Net017.h5|8|-|Drives over yellow marking|
 
 \* Performance is a personal rating in range 0-10, 0 being very poor, 10 being very good
 \*\* Point of failure describes the position the vehicle left the road
