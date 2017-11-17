@@ -1,12 +1,20 @@
 # Project 3: Behavioral cloning
 
+### Remarks
+
+* The saved model.h5 can be found in the ./saved directory as well as other saved nn from the Trial section
+* a video was recorded for a few laps, the file is called video.mp4
+* The model.py file was created from the jupyer notebook model.ipynb and the outputs were deleted. It is also viewable as model.ipynb and model.html
+* The drive.py file was added, it is the default file from the CarND github repo
+
 ## Data collection
 
 In order to collect an appropriate amount of data 2 Laps clockwise und 2 Laps counter clockwise where manually driven on Track1 trying to stay around the middle of the track.
 The data capture resulted in 2080 images counter clockwise and 1707 images clockwise with corresponding steering angles giving a total of 3787 images.
 
 ## Data preparation and augmentation
-Data augmentation was done by using the images of all 3 cameras mounted to the vehicle and applying penalties to the steering angles for the left and right images enhancing the total number of samples to 11361. 
+
+Data augmentation was done by using the images of all 3 cameras mounted to the vehicle and applying penalties of 0.15 to the steering angles for the left and right images enhancing the total number of samples to 11361. 
 To generate even more data, the array containing the samples was duplicated and marked for the images to be flipped horizontally and multiply the steer angle by -1 in the generator.
 
 The data preparation, specifically normalization and cropping, was applied to the beginning of the Network as Lambda and Cropping2D layers. The details will be given in the section describing the Behavioral Cloning Network (Model architecture).
@@ -26,7 +34,7 @@ Note: Using more than one Dense Layers seems to make the network "underreact"
 
 ## Overfitting prevention
 
-In order to prevent overfitting the network dropout was applied to the nn at two stages. The first dropout of 50% was used after the first convolutional layer. The second dropout affects the output of the entire inception module. The dropout layers had a significant positive effect on the network performance.
+In order to prevent overfitting the network dropout was applied to the nn at two stages. The first dropout of 10% was used after the first convolutional layer. The second dropout affects the output of the entire inception module with a dropout of 25%. The dropout layers had a significant positive effect on the network performance.
 
 ## Model summary
 
@@ -81,7 +89,7 @@ An advantage of this network architecture is the small number of only 117 623 tr
 
 ## Model training
 
-The model was trained using Adaptive Moment Estimation (Adam) optimizer minimizing the mean square error (mse) during training. A batch size of 128 was used. An epoch count of 8 was used to train the model.
+The model was trained using Adaptive Moment Estimation (Adam) optimizer minimizing the mean square error (mse) during training. A batch size of 128 was used. An epoch count of 5 was used to train the model.
 
 ## Trial
 
@@ -109,4 +117,5 @@ An overview of the network performances is given in the following table:
 |Net017.h5|8|-|Drives over yellow marking|
 
 \* Performance is a personal rating in range 0-10, 0 being very poor, 10 being very good
+
 \*\* Point of failure describes the position the vehicle left the road
