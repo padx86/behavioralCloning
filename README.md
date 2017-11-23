@@ -25,10 +25,13 @@ The data capture resulted in 2080 images counter clockwise and 1707 images clock
 
 Data augmentation was done by using the images of all 3 cameras mounted to the vehicle and applying penalties of 0.15 to the steering angles for the left and right images enhancing the total number of samples to 11361. 
 To generate even more data, the array containing the samples was duplicated and marked for the images to be flipped horizontally and multiply the steer angle by -1 in the generator. The effect is shown in following images:
+
 ![clockwise central camera](img/clockwise_1_center.jpg "clockwise central camera")
 ![clockwise central camera flipped](img/clockwise_1_center_flipped.jpg "clockwise central camera flipped")
+
 ![counterclockwise left camera](img/counterclockwise_1_left.jpg "counterclockwise left camera")
 ![counterclockwise left camera flipped](img/counterclockwise_1_left_flipped.jpg "counterclockwise left camera flipped")
+
 The data preparation, specifically normalization and cropping, was applied to the beginning of the Network as Lambda and Cropping2D layers. The details will be given in the section describing the Behavioral Cloning Network (Model architecture).
 
 ## Data generation 
