@@ -3,10 +3,10 @@
 ### Remarks
 
 #### Version 2
-* After the Review comment concerning BGR-Images on NN-training and RGB-Images in the simulation the NN was retrained using RGB-Images logically resulting in a change on network performance. Theerefore the line ```img = img[:,:,::-1]``` was added to the generator function[see modelV2.py]
-* The new sved model can be found in ./saved/modelV2.h5
+* After the review comment concerning BGR-Images on NN-training and RGB-Images in the simulation the NN was retrained using RGB-Images logically resulting in a change on network performance. Therefore the line ```img = img[:,:,::-1]``` was added to the generator function[see modelV2.py]
+* The new saved model can be found in ./saved/modelV2.h5
 * Images were added to the Data preparation and augmentation section as required in the review.
-* A new video was recorded for 2 laps meeting the condition of the car entirely beeing within the track [see videoV2.mp4]. In order to keep the car inside the track higher steering angle penalties (0.35 instead of 0.15) were applied to left and right images. By applying higher penalties the vehicle became more 'reactive' and driving smoothness decreased. 
+* A new video was recorded for 2 laps meeting the condition of the car entirely being within the track [see videoV2.mp4]. In order to keep the car inside the track higher steering angle penalties (0.35 instead of 0.15) were applied to left and right images. By applying higher penalties the vehicle became more 'reactive' and driving smoothness decreased.
 
 #### Version 1
 * The saved model.h5 can be found in the ./saved directory as well as other saved nn from the Trial section
@@ -26,9 +26,11 @@ The data capture resulted in 2080 images counter clockwise and 1707 images clock
 Data augmentation was done by using the images of all 3 cameras mounted to the vehicle and applying penalties of 0.15 to the steering angles for the left and right images enhancing the total number of samples to 11361. 
 To generate even more data, the array containing the samples was duplicated and marked for the images to be flipped horizontally and multiply the steer angle by -1 in the generator. The effect is shown in following images:
 
+Clockwise driving image recorded by central camera: normal(left) and flipped(right):
 ![clockwise central camera](img/clockwise_1_center.jpg "clockwise central camera")
 ![clockwise central camera flipped](img/clockwise_1_center_flipped.jpg "clockwise central camera flipped")
 
+Counterclockwise driving image recorded by left camera: normal(left) and flipped(right):
 ![counterclockwise left camera](img/counterclockwise_1_left.jpg "counterclockwise left camera")
 ![counterclockwise left camera flipped](img/counterclockwise_1_left_flipped.jpg "counterclockwise left camera flipped")
 
